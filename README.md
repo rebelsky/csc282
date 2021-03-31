@@ -1,2 +1,5 @@
-# csc282
-The latest version of the csc282 course (easier to start from scratch)
+# csc282 - Thinking in C and Unix
+
+The latest (but not greatest) materials from SamR's "Thinking in C and
+Unix".
+
