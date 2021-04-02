@@ -1,0 +1,47 @@
+{% comment %}
+Include this file to list items from a collection ordered by the date they are
+assigned. By default, this template pulls items from the "assigned" key on each
+schedule day, but you can pass the "schedule_section" parameter to change this
+behavior.
+
+\param  items   An array of items that should be searched for matches.
+\param  schedule_section  (optional) The section of the schedule that should be
+                          scanned to find references to pages in the items array
+
+Examples:
+  {% include list_assigned.html items=site.assignments %}
+  {% include list_assigned.html items=site.labs schedule_section="lab" %}
+{% endcomment %}
+
+{% assign schedule_section = "assigned" %}
+{% if include.schedule_section %}
+  {% assign schedule_section = include.schedule_section %}
+{% endif %}
+
+<dl>
+  {% for day in site.data.extra %}
+    {% for item in day[schedule_section] %}
+      {% if item.page %}
+        {% assign match = include.items | where: "url", item.page | first %}
+        {% if match %}
+          {% include find_dates.html url=item.page %}
+          {% if assigned-day == day.date or schedule_section != "assigned" %}
+            <dt>
+              {% if match.link %}
+                <a href="{{ match.url | prepend: site.baseurl }}">{{ match.title }}{% if match.subtitle %}: {{ match.subtitle }}{% endif %}</a>
+              {% else %}
+                {{ match.title }}
+              {% endif %}
+            </dt>
+            <dd>
+              <ul class="list-inline">
+                <li>Assigned: {{ day.date | date: '%A, %-d %B %Y' }}</li>
+                <!-- <li>Due: {{ due-day | date: '%A, %-d %B %Y' }}{% if due-time %} (by {{ due-time }}){% endif %}</li> -->
+              </ul>
+            </dd>
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</dl>

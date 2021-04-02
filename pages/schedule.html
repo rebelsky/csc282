@@ -1,0 +1,290 @@
+---
+title: Schedule
+permalink: /schedule/
+---
+<h1>{{ page.title }}</h1>
+
+<p>
+  The schedule below shows the tentative dates for all class topics,
+  readings, and assignments.
+  You should complete all assigned reading before class on the day
+  it is listed.  Labs will be available shortly before the assigned
+  lab day.  There may be some revisions to the schedule during the
+  semester, but I will make sure to announce these changes in class.
+</p>
+
+<p>
+  If you view this page with JavaScript enabled you can jump to the
+  current week on the schedule, and you should see the next day of
+  class highlighted in the schedule below.
+</p>
+
+<p id="jump-to-week" style="display: none;">
+  <a class="btn btn-info btn-sm" href="javascript:jump_to_current_week()">Jump to Current Week</a> </p>
+
+{% assign classes = site.data.classes %}
+{% assign extra = site.data.extra %}
+{% assign index-extra = 0 %}
+{% assign classnum = 0 %}
+{% assign weekinfo = site.data.weeks %}
+
+{% for week in site.data.dates %}
+  {% if week.break %}
+    <div class="panel-info">
+      <div class="panel-heading"><strong>{{ week.week }}</strong></div>
+      <div class="panel-body"></div>
+    </div>
+  {% else %}
+    <div class="panel-primary schedule-week" id="{{ week.week | slugify }}">
+      <div class="panel-heading">
+        <strong>
+          {{ week.week }}
+          {% if week.num %}
+          : {{ weekinfo[week.num].name }}
+          {% endif %}
+        </strong>
+      </div>
+      <div class="panel-body">
+        {% assign first = true %}
+        {% for day in week.days %}
+          <!-- Does the class meet?  Do additional things happen? -->
+          {% assign class = false %}
+          {% assign additional = false %}
+          {% if day.date == extra[index-extra].date %}
+            {% assign additional = extra[index-extra] %}
+            {% assign index-extra = index-extra | plus: '1' %}
+          {% endif %}
+          {% if day.class %}
+            {% assign class = classes[classnum] %}
+            {% assign classnum = classnum | plus: '1' %}
+          {% endif %}
+
+          <!-- The left headers for days we have a class or something else -->
+          {% if class or additional %}
+            {% if first == false %}<hr>{% endif %}
+            {% assign first = false %}
+
+            {% if class %}
+            <div class="row schedule-day" id="day-{{ day.date }}">
+            {% else %}
+	    <!-- Consider adding no-class -->
+            <div class="row schedule-day {% if first %}first{% endif %}">
+            {% endif %}
+
+              <div class="col-md-1 col-sm-1 col-xs-2 text-center">
+                <span class="day-of-week">
+                  {{ day.date | date: "%a" | replace: "Mon", "M" | replace: "Tue", "Tu" | replace: "Wed", "W" | replace: "Thu", "Th" | replace: "Fri", "F" | replace: "Sat", "Sa" | replace: "Sun", "Su" }}
+                </span>
+                <br/>
+                <span class="full-date text-nowrap">
+                  {{ day.date | date: "%b %e" }} 
+                  {% if class %} 
+                    <br/>
+                    <em>class {{ classnum }}</em>
+                  {% endif %}
+                </span>
+              </div>
+          {% endif %}
+
+          {% if class %}
+              <div class="col-md-11 col-sm-11 col-xs-10">
+                <div class="row">
+                  <div class="col-md-12">
+                    {% if class.abbrev %}
+                      {% assign abbrev = class.abbrev %}
+                    {% else %}
+                      {% assign abbrev = class.topic | slugify %}
+                    {% endif %}
+                    <h4 id="{{ abbrev }}">
+                      {% if class.notes %}<a href="{{ class.notes }}">{% endif %}
+                      {{ class.topic }}
+                      {% if class.notes %}</a>{% endif %}
+                    </h4>
+                    {% if class.summary %}
+                      {{ class.summary | markdownify }}
+                    {% endif %}
+                    {% if class.subjects %}
+                      {{ class.subjects | join: ". "  | append: "." | replace: "?.", "." | prepend: "**Topics**: " | markdownify }}
+                    {% endif %}
+                    {% if class.links %}
+                      <ul class="list-inline">
+                        {% for link in class.links %}
+                          <li><a href="{{ link.url }}">{% if link.icon %}<i class="fa {{ link.icon }} fa-fw"></i>&nbsp;{% endif %}{{ link.title }}</a></li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </div>
+                </div>
+                <div class="row stuff">
+                  <div class="reading col-md-4 col-sm-4 col-xs-6">
+                    {% assign reading = class.reading %}
+                    {% if reading.size > 1 %}
+                      <strong>Readings</strong>
+                    {% else %}
+                      <strong>Reading</strong>
+                    {% endif %}
+                    {% include schedule_items.html items=reading default="_No reading_" %}
+                  </div> <!-- reading -->
+                  <div class="lab col-md-4 col-sm-4 col-xs-6">
+                    {% assign lab = class.lab %}
+                    {% if lab.size > 1 %}
+                      <strong>Labs</strong>
+                    {% else %}
+                      <strong>Lab</strong>
+                    {% endif %}
+                    {% include schedule_items.html items=lab default="_No lab_"%}
+                  </div> <!-- lab -->
+                  <div class="clearfix visible-xs-block"></div>
+                  <div class="additional col-md-4 col-sm-4 col-xs-12 {% unless additional %}hidden-xs{% endunless %}">
+                    <div class="row">
+                      {% if additional.assigned %}
+                        <div class="col-lg-5 col-md-12 col-sm-12 col-xs-6">
+                          <strong>Assigned</strong>
+                          {% assign assigned = additional.assigned %}
+                          {% include schedule_items.html items=assigned default="_No work assigned_" %}
+                        </div>
+                      {% endif %}
+                      {% if additional.due %}
+                        <div class="col-lg-7 col-md-12 col-sm-12 col-xs-6">
+                          <strong>Due</strong>
+                          {% assign due = additional.due %}
+                          {% include schedule_items.html items=due default="_No work due_" %}
+                        </div>
+                      {% endif %}
+                    </div> <!-- row -->
+                  </div> <!-- additional -->
+                </div <!-- stuff -->
+              </div> <!-- classinfo -->
+            </div> <!-- schedule-day -->
+
+          {% elsif additional %}
+              <div class="col-md-11 col-sm-11 col-xs-10">
+                <div class="row">
+                  <div class="col-md-8 col-sm-8 col-xs-12">
+                    {% if additional.message %}
+                      <h4>{{ additional.message | markdownify | remove: '<p>' | remove: '</p>' }}</h4>
+                    {% else %}
+                      &nbsp;
+                    {% endif %}
+                    {{ additional.summary | markdownify }}
+                  </div>
+                  {% if additional.assigned or additional.due %}
+                    <div class="schedule-spacer"></div>
+                    <div class="no-class-due-column col-md-4 col-sm-4 col-xs-12 {% unless additional.assigned or additional.due %}hidden-xs{% endunless %}">
+                      <div class="row">
+                        {% if additional.assigned %}
+                          <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                            <b>Assigned</b>
+                            {% assign assigned = additional.assigned %}
+                            {% include schedule_items.html items=assigned %}
+                          </div>
+                        {% endif %}
+                        {% if additional.due %}
+                          <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+                            <b>Due</b>
+                            {% assign due = additional.due %}
+                            {% include schedule_items.html items=due %}
+                          </div>
+                        {% endif %}
+                      </div>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+          </div>
+
+          <!-- Nothing happens today, so nothing to record -->
+          {% else %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+  {% endif %}
+{% endfor %}
+
+<!-- Script by Charlie Curtsinger.  Updated by Samuel A. Rebelsky -->
+<script type="text/javascript">
+  // Build array of last days of each week and ids for all schedule rows (generated)
+  var end_dates = [];
+  var days = [];
+  {% for week in site.data.dates %}
+    {% if week.break %}
+    {% else %}
+      {% for day in week.days %}
+        {% if day.class %}
+          days.push({id: "day-{{ day.date }}", date: new Date("{{ day.date | date_to_rfc822 }}")});
+          {% assign last-day = day.date %}
+        {% endif %}
+      {% endfor %}
+      end_dates.push({week: "{{ week.week | slugify }}", last_day: new Date("{{ last-day | date_to_rfc822 }}")});
+    {% endif %}
+  {% endfor %}
+  
+  // Increment each day so it refers to the first day of the next week
+  for(var i in end_dates) {
+    end_dates[i].last_day.setDate(end_dates[i].last_day.getDate()+1);
+  }
+  
+  // For daily rows, add to the hours so the indicator moves at 5pm each day
+  for(var i in days) {
+    days[i].date.setHours(17)
+  }
+  
+  // Highlight the next class
+  highlight_next_class();
+  
+  function highlight_next_class() {
+    // Clear the previous selection
+    for(var day of days) {
+      var e = document.getElementById(day.id);
+      if(e) {
+        e.classList.remove("current-day");
+      }
+    }
+    
+    // Get the current date
+    var today = new Date();
+  
+    // Find the next day of class and set it to the active state
+    var next_day_index = 0;
+    while(today >= days[next_day_index].date) {
+      next_day_index++;
+    }
+    if(next_day_index < days.length) {
+      var e = document.getElementById(days[next_day_index].id);
+      if(e) {
+        e.classList.add("current-day");
+      }
+    }
+    
+    // Update the selection again in a minute
+    setTimeout(highlight_next_class, 60*1000);
+  }
+  
+  // Unhide the jump to current week button if javascript is enabled
+  document.getElementById('jump-to-week').style = '';
+  
+  function jump_to_current_week() {
+    // Get the current date
+    var today = new Date();
+    
+    // Starting at index zero, find the first week that does not entirely precede today
+    var dest_index = 0;
+    while(today >= end_dates[dest_index].last_day) {
+      dest_index++;
+    }
+    
+    // The following code is from
+    // https://stackoverflow.com/questions/13735912/anchor-jumping-by-using-javascript
+    
+    // Save the current url (without hashes)
+    var url = location.href;
+    
+    // Jump to the appropriate week
+    location.href = "#"+end_dates[dest_index].week;
+    
+    // Drop the anchor name from the browser URL
+    history.replaceState(null, null, url);
+  }
+</script>

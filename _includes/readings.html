@@ -1,0 +1,6 @@
+{% gload readings %}
+{% if readings and include.recompute != true %}
+{% else %}
+  {% assign readings = site.data.classes | map: "reading" %}
+  {% gsave readings %}
+{% endif %}

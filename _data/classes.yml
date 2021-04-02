@@ -1,0 +1,45 @@
+- topic: Thinking in C and Unix
+  abbrev: thinking
+  summary: | 
+    We begin the class by considering the core issues that we plan to
+    study.
+  reading:
+    - link: About the course
+      url: https://rebelsky.cs.grinnell.edu/musings/cnix-intro-1
+    - link: Thinking in C
+      url: https://rebelsky.cs.grinnell.edu/musings/cnix-thinking-in-c
+    - link: Thinking in Unix
+      url: https://rebelsky.cs.grinnell.edu/musings/cnix-thinking-in-unix
+    - link: Thinking like SamR
+      url: https://rebelsky.cs.grinnell.edu/musings/cnix-thinking-like-sam
+  notes: ../eboards/eboard01
+
+- topic: Common Unix Tools
+
+- topic: No Class
+
+- topic: Thinking in C &amp; Unix, Revisited
+
+- topic: Simple Linux Tasks
+
+- topic: The Bash shell, a refresher
+
+- topic: Automating work with Make 
+
+- topic: Exploring a C project
+
+- topic: Macros and the C preprocessor
+
+- topic: More fun with macros
+
+- topic: Understanding your code
+
+- topic: Command-line processing
+
+- topic: A Unix miscellany
+
+- topic: TBD
+
+- topic: Wrapup
+
+- topic: TBD

@@ -1,0 +1,73 @@
+---
+layout: default
+---
+{% include find_dates.html url=page.url %}
+{% include lab_date.html url=page.url %}
+{% include reading_date.html url=page.url %}
+
+<h1>{% if page.section %}{{ page.section }}: {% endif %}{{ page.title }}{% if page.subtitle %}: {{ page.subtitle }} {% endif %}</h1>
+
+<dl class="dl-horizontal narrow">
+  {% if assigned-day %}
+    <dt>Assigned</dt>
+    <dd>{{ assigned-day | date: "%A, %-d %B %Y" }}</dd>
+  {% elsif lab-day %}
+    <dt>Assigned</dt>
+    <dd>{{ lab-day | date: "%A, %-d %B %Y" }}</dd>
+  {% endif %}
+
+<!--
+  {% if due-day %}
+    <dt>Due</dt>
+    <dd>{{ due-day | date: "%A, %-d %B %Y" }}{% if due-time %} by {{ due-time }}{% endif %}</dd>
+  {% elsif lab-due %}
+    <dt>Writeup due</dt>
+    <dd>{{ lab-due | date: "%A, %-d %B %Y" }}{% if due-time %} by {{ due-time }}{% endif %}</dd>
+  {% elsif page.no-due-message %}
+    <dt>Due</dt>
+    <dd>{{ page.no-due-message | markdownify | remove: "<p>" | remove: "</p>" }}</dd>
+  {% endif %}
+-->
+  
+  {% if reading-day %}
+    <dt>Read By</dt>
+    <dd>{{ reading-day | date: "%A, %-d %B %Y" }}</dd>
+  {% endif %}
+  
+  {% if page.summary %}
+    <dt>Summary</dt>
+    <dd>{{ page.summary | process_liquid | markdownify | remove: "<p>" | remove: "</p>" }}</dd>
+  {% endif %}
+  
+  {% if page.prereqs %}
+    <dt>Prerequisites</dt>
+    <dd>{{ page.prereqs | process_liquid | markdownify | remove: "<p>" | remove: "</p>" }}</dd>
+  {% endif %}
+
+  {% if page.collaboration %}
+    <dt>Collaboration</dt>
+    <dd>{{ page.collaboration | process_liquid | markdownify | remove: "<p>" | remove: "</p>" }}</dd>
+  {% endif %}
+  
+  {% if page.submitting %}
+    <dt>Submitting</dt>
+    <dd>{{ page.submitting | process_liquid | markdownify | remove: "<p>" | remove: "</p>" }}</dd>
+  {% endif %}
+
+  {% if page.workload %}
+    <dt>Expected time</dt>
+    <dd>{{ page.workload | process_liquid | markdownify | remove: "<p>" | remove: "</p>" }}</dd>
+  {% endif %}
+
+  {% for note in page.note %}
+    <dt>Note</dt>
+    <dd>{{ note | process_liquid | markdownify | remove: "<p>" | remove: "</p>" }}</dd>
+  {% endfor %}
+
+  {% if page.disclaimer %}
+    <dt>Disclaimer</dt>
+    <dd>{{ page.disclaimer | process_liquid | markdownify | remove: "<p>" | remove: "</p>" }}</dd>
+  {% endif %}
+</dl>
+
+{{ content | process_image_in_pre  }}

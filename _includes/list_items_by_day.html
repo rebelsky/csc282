@@ -1,0 +1,61 @@
+{% comment %}
+Include this file to list items grouped by the day they appear on the schedule.
+
+\param  items   An array of site pages that should be matched against each day
+                on the schedule.
+\param  schedule_section  The section of the schedule that should be scanned
+                          for matches.
+
+Examples:
+  {% include list_items_by_day.html items=site.labs schedule_section="lab" %}
+  {% include list_items_by_day.html items=site.readings schedule_section="reading" %}
+{% endcomment %}
+
+<dl class="dl-horizontal">
+  {% assign daynum = 0 %}
+  {% for week in site.data.dates %}
+    {% for day in week.days %}
+      {% if day.class %}
+        {% assign class = site.data.classes[daynum] %}
+        {% assign daynum = daynum | plus: 1 %}
+        {% assign matches = "" | split: "," %}
+        {% for item in class[include.schedule_section] %}
+          {% if item.page %}
+            {% assign match = include.items | where: "url", item.page | first %}
+            {% unless match %}
+              {% assign match = site.pages | where: "url", item.page | first %}
+            {% endunless %}
+            {% if match %}
+              {% assign matches = matches | push: match %}
+            {% endif %}
+          {% elsif item.link %}
+            {% assign matches = matches | push: item %}
+          {% else %}
+            {% assign matches = matches | push: item %}
+          {% endif %}
+        {% endfor %}
+        {% assign num_matches = matches | size %}
+        {% if num_matches > 0 %}
+          <dt>{{ day.date | date: '%-d %B %Y' }}</dt>
+          <dd>
+            <ul class="list-unstyled">
+              {% for match in matches %}
+                <li>
+                  {% if match.url %}
+                    {% if match.title %}
+                      <a href="{{ match.url | prepend: "../" }}">{{ match.title }}</a>
+                    {% else %}
+                      <a href="{{ match.url }}">{{ match.link }}</a>*
+                    {% endif %}
+                  {% else %}
+                    {{ match }}
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          </dd>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</dl>

@@ -1,0 +1,17 @@
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <button data-toggle="collapse" data-target="#{{include.id}}" >
+          {% if include.button %} {{include.button}} {% else %} Show/Hide {% endif %}
+        </button>
+      </h4>
+    </div>
+    <div id="{{include.id}}" class="panel-collapse collapse">
+      <div class="panel-body">{{include.text | markdownify }}</div>
+      {% if include.caption %}
+        <div class="panel-footer">{{include.caption | markdownify }}</div>
+      {% endif %}
+    </div>
+  </div>
+</div>

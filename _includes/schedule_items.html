@@ -1,0 +1,9 @@
+<ul class="list-unstyled schedule-items">
+  {% if include.items %}
+    {% for item in include.items %}
+      <li>{% include schedule_item.html item=item %}</li>
+    {% endfor %}
+  {% else %}
+    <li>{% include schedule_item.html item=include.default %}</li>
+  {% endif %}
+</ul>

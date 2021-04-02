@@ -1,0 +1,29 @@
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <span class="navbar-brand"><img src="{{ "/assets/images/laurel-white.png" | prepend: site.baseurl }}" alt="Grinnell College Logo"> {{ site.title }}</span>
+    </div> <!-- /.navbar-header -->
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        {% for item in site.data.nav %}
+          {% assign pagepath = page.url | prepend: site.baseurl %}
+          {% assign itempath = item.path | prepend: site.baseurl %}
+          {% if page.url == "/" %}
+            {% assign pagepath = "/index.html" | prepend: site.baseurl %}
+          {% endif %}
+          {% if item.path %}
+            <li{% if pagepath contains itempath %} class="active"{% endif %}><a href="{{ item.path | prepend: site.baseurl | replace: '/index.html', '/' }}">{{ item.title }}</a></li>
+          {% elsif item.url %}
+            <li><a href="{{ item.url }}" target="_blank">{{ item.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div> <!-- /.nav-collapse -->
+  </div><!-- /.container -->
+</nav>

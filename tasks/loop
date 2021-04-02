@@ -1,0 +1,13 @@
+#!/bin/bash
+
+while [ true ] 
+do  
+  echo "--------------------------------------------------------------"; 
+  date;   
+  echo "----------------------------";
+  echo "";
+  tasks/deploy; 
+  echo "";  
+  echo "";  
+  sleep 10; 
+done

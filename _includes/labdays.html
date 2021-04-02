@@ -1,0 +1,6 @@
+{% gload labdays %}
+{% if labdays and include.recompute != true %}
+{% else %}
+  {% assign labdays = site.data.classes | map: "lab" %}
+  {% gsave labdays %}
+{% endif %}

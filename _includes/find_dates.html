@@ -1,0 +1,31 @@
+{% assign reading-day = false %}
+{% assign lab-day = false %}
+{% assign assigned-day = false %}
+{% assign due-day = false %}
+{% assign due-time = false %}
+
+{% for find_dates_day in site.data.extra %}
+  {% assign find_dates_match = find_dates_day.reading | where_exp: "find_dates_reading", "find_dates_reading.page == include.url" | first %}
+  {% if find_dates_match %}
+    {% unless reading-day %}
+      {% assign reading-day = find_dates_day.date %}
+    {% endunless %}
+  {% endif %}
+  
+  {% assign find_dates_match = find_dates_day.lab | where_exp: "find_dates_lab", "find_dates_lab.page == include.url" | first %}
+  {% if find_dates_match %}
+    {% assign lab-day = find_dates_day.date %}
+  {% endif %}
+  
+  {% assign find_dates_match = find_dates_day.assigned | where_exp: "find_dates_assigned", "find_dates_assigned.page == include.url" | first %}
+  {% if find_dates_match %}
+    {% assign assigned-day = find_dates_day.date %}
+  {% endif %}
+  
+  {% for find_dates_due in find_dates_day.due %}
+    {% if find_dates_due.page == include.url %}
+      {% assign due-day = find_dates_day.date %}
+      {% assign due-time = find_dates_due.time %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}

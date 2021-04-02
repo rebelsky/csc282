@@ -1,0 +1,24 @@
+<div class="row footer">
+  <div class="col-md-12">
+    <hr>
+    {% if page.copyright %}
+    {{ page.copyright | markdownify }}
+    {% elsif site.copyright %}
+    {{ site.copyright | markdownify }}
+    {% endif %}
+    {% if page.copyright_message %}
+    {{ page.copyright_message | markdownify }}
+    {% elsif site.copyright_message %}
+    {{ site.copyright_message | markdownify }}
+    {% endif %}
+    <p>
+      This website was built using <a href="http://jekyllrb.com">Jekyll</a>, <a href="http://getbootstrap.com">Twitter Bootstrap</a>, and the <a href="https://bootswatch.com/cosmo/">Bootswatch Cosmo Theme</a>.
+    </p>
+  </div> <!-- /.col-md-12 -->
+</div> <!-- /.row -->
+
+<script src="{{ '/assets/javascripts/jquery.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/assets/javascripts/bootstrap.min.js' | prepend: site.baseurl }}"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>

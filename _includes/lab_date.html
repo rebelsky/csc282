@@ -1,0 +1,17 @@
+{% include labdays.html %}
+{% include classdates.html %}
+{% assign lab-day = false %}
+
+{% assign classnum = 0 %}
+{% for day in labdays %}
+  {% unless lab-day %}
+    {% assign labmatch = day | where_exp: "tmp", "tmp.page == include.url" | first %}
+    {% if labmatch %}
+      {% assign lab-day = classdates[classnum] %}
+      {% assign tmp = classnum | plus: '1' %}
+      {% assign lab-due = classdates[tmp] %}
+    {% endif %}
+  {% endunless %}   
+  {% assign classnum = classnum | plus: '1' %}
+{% endfor %}
+

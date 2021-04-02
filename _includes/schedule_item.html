@@ -1,0 +1,37 @@
+{% if include.item.icon %}<i class="fa {{ include.item.icon }}" {% if include.item.title %}title="{{ include.item.title }}" {% endif %}aria-hidden="true"></i>{% endif %}
+{% if include.item.link %}
+  <a href="{{ include.item.url }}" target="_blank">{{ include.item.link | markdownify | remove: '<p>' | remove: '</p>' }}</a>
+{% elsif include.item.resource %}
+  <a href="{{ include.item.resource | prepend: site.baseurl }}">
+    {{ include.item.title }}
+  </a>
+{% elsif include.item.page or include.url or include.item.resource %}
+  {% if include.url %}
+    {% assign url = include.url %}
+  {% else %}
+    {% assign url = include.item.page %}
+  {% endif %}
+  {% assign page = site.documents | where: "url", url | first %}
+  {% unless page %}
+    {% assign page = site.pages | where: "url", url | first %}
+  {% endunless %}
+  {% if page %}
+    {% if page.link or jekyll.environment == 'test' %}<a href="{{ page.url | prepend: site.baseurl }}">{% endif %}
+    {{ page.title }}{% if page.subtitle %}: {{ page.subtitle }}{% endif %}
+    {% if page.link or jekyll.environment == 'test %}</a>{% endif %}
+  {% else %}
+    {{ url }}
+  {% endif %}
+{% elsif include.item.text %}
+  {{ include.item.text | markdownify | remove: '<p>' | remove: '</p>' }}
+{% else %}
+  {{ include.item | markdownify | remove: '<p>' | remove: '</p>' }}
+{% endif %}
+
+{% if include.item.time %}
+  <span class="text-muted">(by {{ include.item.time }})</span>
+{% endif %}
+
+{% if include.item.subtitle %}
+  <p class="schedule-item-subtitle text-muted">{% if include.item.icon %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{% endif %}{{ include.item.subtitle | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+{% endif %}

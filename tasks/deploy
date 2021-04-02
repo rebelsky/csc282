@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# tasks/deploy
+#   Deploy the site to the appropriate location.
+#
+#   Assumes that the `reclaim` host is setup appropriately in .ssh/config
+
+# Settings.  These should probably exist somewhere else.
+SEMESTER=2021SpT2
+COURSE=CSC282
+SITE=public_html/Courses/$COURSE/$SEMESTER/
+REMOTE=rebelsky.cs.grinnell.edu
+
+# Feedback
+echo $SITE
+
+# Rebuild!
+bundle exec jekyll build
+
+rsync -rtz _site/ $REMOTE:$SITE

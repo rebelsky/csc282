@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+          <p style="background:black; color:white; font-weight:bold; text-align:center;">Warning!  This site is under development.</p>
+	  <div class="container content">
+      <div class="row">
+        <div class="col-md-12">
+        </div> <!-- /col-md-12 -->
+      </div> <!-- /row -->
+      <div class="row">
+        <div class="col-md-12">
+          {{ content }}
+        </div> <!-- /col-md-12 -->
+      </div> <!-- /row -->
+      {% include footer.html %}
+	  </div> <!-- /.container -->
+  </body>
+</html>

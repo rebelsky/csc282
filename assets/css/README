@@ -1,0 +1,8 @@
+Rebuilding the theme CSS takes a long time, do these are not built by default. Follow these steps to rebuild:
+
+1. Remove the theme-*.css files from /assets/css
+2. Move the .scss files you want to rebuild into /assets/css
+3. Make any changes to the scss source
+4. Build the site
+5. Copy the _site/assets/css/theme-*.css to assets/css
+6. Move assets/css/theme-*.scss back to /assets/css/_theme_source

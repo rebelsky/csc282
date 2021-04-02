@@ -1,0 +1,14 @@
+{% include readings.html %}
+{% include classdates.html %}
+
+{% assign classnum = 0 %}
+{% for day in readings %}
+  {% unless due-day %}
+    {% assign match = day | where_exp: "tmp", "tmp.page == include.url" | first %}
+    {% if match %}
+      {% assign due-day = classdates[classnum] %}
+    {% endif %}
+  {% endunless %}   
+  {% assign classnum = classnum | plus: '1' %}
+{% endfor %}
+

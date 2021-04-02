@@ -1,0 +1,109 @@
+- week: "Week 0"
+  num: 0
+  anchor: week00
+  days:
+    - { date: 2021-03-28 }
+    - { date: 2021-03-29 }
+    - { date: 2021-03-30 }
+    - { date: 2021-03-31 }
+    - { date: 2021-04-01, class: true }
+    - { date: 2021-04-02 }
+    - { date: 2021-04-03 }
+
+- week: "Week 1"
+  num: 1
+  anchor: week01
+  days:
+    - { date: 2021-04-04 }
+    - { date: 2021-04-05 }
+    - { date: 2021-04-06, class: true }
+    - { date: 2021-04-07 }
+    - { date: 2021-04-08, class: true }
+    - { date: 2021-04-09 }
+    - { date: 2021-04-10 }
+
+- week: "Week 2"
+  num: 2
+  anchor: week02
+  days:
+    - { date: 2021-04-11 }
+    - { date: 2021-04-12 }
+    - { date: 2021-04-13, class: true }
+    - { date: 2021-04-14 }
+    - { date: 2021-04-15, class: true }
+    - { date: 2021-04-16 }
+    - { date: 2021-04-17 }
+
+- week: "Week 3"
+  num: 3
+  anchor: week03
+  days:
+    - { date: 2021-04-18 }
+    - { date: 2021-04-19 }
+    - { date: 2021-04-20, class: true }
+    - { date: 2021-04-21 }
+    - { date: 2021-04-22, class: true }
+    - { date: 2021-04-23 }
+    - { date: 2021-04-24 }
+
+- week: "Week 4"
+  num: 4
+  anchor: week04
+  days:
+    - { date: 2021-04-25 }
+    - { date: 2021-04-26 }
+    - { date: 2021-04-27, class: true }
+    - { date: 2021-04-28 }
+    - { date: 2021-04-29, class: true }
+    - { date: 2021-04-30 }
+    - { date: 2021-05-01 }
+
+- week: "Week 5"
+  num: 5
+  anchor: week05
+  days:
+    - { date: 2021-05-02 }
+    - { date: 2021-05-03 }
+    - { date: 2021-05-04, class: true }
+    - { date: 2021-05-05 }
+    - { date: 2021-05-06, class: true }
+    - { date: 2021-05-07 }
+    - { date: 2021-05-08 }
+
+- week: "Week 6"
+  num: 6
+  anchor: week06
+  days:
+    - { date: 2021-05-09 }
+    - { date: 2021-05-10 }
+    - { date: 2021-05-11, class: true }
+    - { date: 2021-05-12 }
+    - { date: 2021-05-13, class: true }
+    - { date: 2021-05-14 }
+    - { date: 2021-05-15 }
+
+- week: "Week 7"
+  num: 7
+  anchor: week07
+  days:
+    - { date: 2021-05-16 }
+    - { date: 2021-05-17 }
+    - { date: 2021-05-18, class: true }
+    - { date: 2021-05-19 }
+    - { date: 2021-05-20, class: true }
+    - { date: 2021-05-21 }
+    - { date: 2021-05-22 }
+
+- week: "Finals (Half-)Week"
+  anchor: finals
+  days:
+    - { date: 2021-05-23 }
+    - { date: 2021-05-24 }
+    - { date: 2021-05-25 }
+    - { date: 2021-05-26 }
+    - { date: 2021-05-27 }
+    - { date: 2021-05-28 }
+    - { date: 2021-05-29 }
+
+- week: "Summer"
+  break: true

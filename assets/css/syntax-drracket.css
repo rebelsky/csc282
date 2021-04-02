@@ -1,0 +1,109 @@
+.language-racket.highlighter-rouge .hll, 
+.language-racket.highlighter-rouge pre, 
+.language-racket pre code.highlight,
+.language-drracket.highlighter-rouge .hll, 
+.language-drracket.highlighter-rouge pre, 
+.language-drracket pre code.highlight {
+  background-color: transparent;
+  border-radius: 4px;
+  border-width: 1px;
+  border-color: rgb(96, 96, 96);
+}
+
+code.highlighter-rouge, code.highlight {
+  color: black;
+  background-color: transparent;
+  padding: 0.1em;
+}
+
+.marker {
+  display: none;
+}
+
+/* DrRacket: Symbol rgb(38, 38, 128) */
+.language-racket .na, .language-drracket .na { color: rgb(38, 38, 128) } /* Name.Attribute */
+.language-racket .nb, .language-drracket .nb { color: rgb(38, 38, 128) } /* Name.Builtin */
+.language-racket .nc, .language-drracket .nc { color: rgb(38, 38, 128) } /* Name.Class */
+.language-racket .no, .language-drracket .no { color: rgb(38, 38, 128) } /* Name.Constant */
+.language-racket .nd, .language-drracket .nd { color: rgb(38, 38, 128) } /* Name.Decorator */
+.language-racket .ni, .language-drracket .ni { color: rgb(38, 38, 128) } /* Name.Entity */
+.language-racket .ne, .language-drracket .ne { color: rgb(38, 38, 128) } /* Name.Exception */
+.language-racket .nf, .language-drracket .nf { color: rgb(38, 38, 128) } /* Name.Function */
+.language-racket .nl, .language-drracket .nl { color: rgb(38, 38, 128) } /* Name.Label */
+.language-racket .nn, .language-drracket .nn { color: rgb(38, 38, 128) } /* Name.Namespace */
+.language-racket .nt, .language-drracket .nt { color: rgb(38, 38, 128) } /* Name.Tag */
+.language-racket .nv, .language-drracket .nv { color: rgb(38, 38, 128) } /* Name.Variable */
+.language-racket .ow, .language-drracket .ow { color: rgb(38, 38, 128) } /* Operator.Word */
+.language-racket .w , .language-drracket .w  { color: rgb(38, 38, 128) } /* Text.Whitespace */
+.language-racket .bp, .language-drracket .bp { color: rgb(38, 38, 128) } /* Name.Builtin.Pseudo */
+.language-racket .vc, .language-drracket .vc { color: rgb(38, 38, 128) } /* Name.Variable.Class */
+.language-racket .vg, .language-drracket .vg { color: rgb(38, 38, 128) } /* Name.Variable.Global */
+.language-racket .vi, .language-drracket .vi { color: rgb(38, 38, 128) } /* Name.Variable.Instance */
+
+/* DrRacket: Keyword rgb(38, 38, 128) */
+.language-racket .k , .language-drracket .k  { color: rgb(38, 38, 128) } /* Keyword */
+.language-racket .o , .language-drracket .o  { color: rgb(38, 38, 128) } /* Operator */
+.language-racket .kc, .language-drracket .kc { color: rgb(38, 38, 128) } /* Keyword.Constant */
+.language-racket .kd, .language-drracket .kd { color: rgb(38, 38, 128) } /* Keyword.Declaration */
+.language-racket .kn, .language-drracket .kn { color: rgb(38, 38, 128) } /* Keyword.Namespace */
+.language-racket .kp, .language-drracket .kp { color: rgb(38, 38, 128) } /* Keyword.Pseudo */
+.language-racket .kr, .language-drracket .kr { color: rgb(38, 38, 128) } /* Keyword.Reserved */
+.language-racket .kt, .language-drracket .kt { color: rgb(38, 38, 128) } /* Keyword.Type */
+
+/* DrRacket: Comment rgb(194, 116, 31) */
+.language-racket .c , .language-drracket .c  { color: rgb(194, 116, 31) } /* Comment */
+.language-racket .c1, .language-drracket .c1 { color: rgb(194, 116, 31) } /* Comment.Single */
+.language-racket .cs, .language-drracket .cs { color: rgb(194, 116, 31) } /* Comment.Special */
+.language-racket .cm, .language-drracket .cm { color: rgb(194, 116, 31) } /* Comment.Multiline */
+.language-racket .cp, .language-drracket .cp { color: rgb(194, 116, 31) } /* Comment.Preproc */
+
+/* DrRacket: String rgb(41, 128, 38) */
+.language-racket .s , .language-drracket .s  { color: rgb(41, 128, 38) } /* Literal.String */
+.language-racket .sb, .language-drracket .sb { color: rgb(41, 128, 38) } /* Literal.String.Backtick */
+.language-racket .sc, .language-drracket .sc { color: rgb(41, 128, 38) } /* Literal.String.Char */
+.language-racket .sd, .language-drracket .sd { color: rgb(41, 128, 38) } /* Literal.String.Doc */
+.language-racket .s2, .language-drracket .s2 { color: rgb(41, 128, 38) } /* Literal.String.Double */
+.language-racket .se, .language-drracket .se { color: rgb(41, 128, 38) } /* Literal.String.Escape */
+.language-racket .sh, .language-drracket .sh { color: rgb(41, 128, 38) } /* Literal.String.Heredoc */
+.language-racket .si, .language-drracket .si { color: rgb(41, 128, 38) } /* Literal.String.Interpol */
+.language-racket .sx, .language-drracket .sx { color: rgb(41, 128, 38) } /* Literal.String.Other */
+.language-racket .sr, .language-drracket .sr { color: rgb(41, 128, 38) } /* Literal.String.Regex */
+.language-racket .s1, .language-drracket .s1 { color: rgb(41, 128, 38) } /* Literal.String.Single */
+.language-racket .ss, .language-drracket .ss { color: rgb(41, 128, 38) } /* Literal.String.Symbol */
+
+/* DrRacket: Text rgb(41, 128, 38) */
+
+/* DrRacket: Constant rgb(41, 128, 38) */
+.language-racket .m , .language-drracket .m  { color: rgb(41, 128, 38) } /* Literal.Number */
+.language-racket .mf, .language-drracket .mf { color: rgb(41, 128, 38) } /* Literal.Number.Float */
+.language-racket .mh, .language-drracket .mh { color: rgb(41, 128, 38) } /* Literal.Number.Hex */
+.language-racket .mi, .language-drracket .mi { color: rgb(41, 128, 38) } /* Literal.Number.Integer */
+.language-racket .mo, .language-drracket .mo { color: rgb(41, 128, 38) } /* Literal.Number.Oct */
+.language-racket .il, .language-drracket .il { color: rgb(41, 128, 38) } /* Literal.Number.Integer.Long */
+
+/* DrRacket #:Keyword rgb(132, 60, 36) */
+
+/* DrRacket: Parenthesis rgb(132, 60, 36) */
+.language-racket .p , .language-drracket .p { color: rgb(132, 60, 36) } /* Parenthesis */
+
+/* DrRacket: Error rgb(255, 0, 0) */
+.language-racket .er, .language-drracket .err { color: rgb(255, 0, 0) } /* Error */
+.language-racket .gr, .language-drracket .gr  { color: rgb(255, 0, 0) } /* Generic.Error */
+
+/* Pygments Generic Settings */
+.language-racket .gd, .language-drracket .gd { color: rgb(0, 0, 0); background-color: #ffdddd } /* Generic.Deleted */
+.language-racket .ge, .language-drracket .ge { color: #000000; font-style: italic } /* Generic.Emph */
+.language-racket .gh, .language-drracket .gh { color: #999999 } /* Generic.Heading */
+.language-racket .gi, .language-drracket .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.language-racket .go, .language-drracket .go { color: rgb(150, 0, 150) } /* Generic.Output */
+.language-racket .gp, .language-drracket .gp { color: rgb(0, 0, 0) } /* Generic.Prompt */
+.language-racket .gs, .language-drracket .gs { font-weight: bold } /* Generic.Strong */
+.language-racket .gu, .language-drracket .gu { color: #aaaaaa } /* Generic.Subheading */
+.language-racket .gt, .language-drracket .gt { color: #aa0000 } /* Generic.Traceback */
+
+/* Additional rules for highlighting DrRacket signatures */
+.language-racket.signature .nv { font-style: italic }
+
+.language-racket.nohighlight span {
+  color: black !important;
+}

@@ -1,0 +1,14 @@
+---
+---
+$brand-primary: #64379F;
+$brand-success: #3FB618;
+$brand-info:    #139BF1;
+$brand-warning: #F16913;
+$brand-danger:  #FF0039;
+
+$current-day-color: lighten($brand-primary, 50%);
+
+@import '_variables';
+@import 'bootstrap';
+@import '_bootswatch.scss';
+@import '_custom.scss';

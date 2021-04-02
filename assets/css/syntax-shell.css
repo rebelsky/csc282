@@ -1,0 +1,22 @@
+/* Shell highlighting */
+div.language-shell.highlighter-rouge div.highlight pre.highlight {
+  background-color: rgb(0, 0, 0);
+  border-width: 1px;
+  border-color: rgb(0, 0, 0);
+  color: white;
+}
+
+div.language-shell.highlighter-rouge .hll, div.language-shell.highlighter-rouge pre, .language-shell pre code.highlight {
+  background-color: rgb(0, 0, 0);
+  border-width: 1px;
+  border-color: rgb(0, 0, 0);
+  color: white;
+}
+
+div.language-shell.highlighter-rouge span {
+  font-weight: normal;
+}
+
+div.language-shell.highlighter-rouge span {
+  color: white;
+}

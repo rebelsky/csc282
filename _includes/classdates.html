@@ -1,0 +1,16 @@
+{% gload classdates %}
+{% if classdates and include.recompute != true %}
+{% else %}
+  {% assign classdates = "" | split: "" %}
+  {% for week in site.data.dates %}
+    {% for day in week.days %}
+      {% if day.class %}
+        {% assign classdate = day.date | split: ' ' %}
+        {% assign classdates = classdates | concat: classdate %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+  {% gsave classdates %}
+{% endif %}
+
+

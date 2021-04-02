@@ -1,0 +1,180 @@
+# Jekyll Site settings
+title: CSC 282-01 (2021SpT2)
+
+baseurl: "/Courses/CSC282/2021SpT2"
+url: http://rebelsky.cs.grinnell.edu/Courses/CSC282/2021SpT2
+
+# Set the theme color. Options are blue, green, red, orange, purple, and gray
+color: purple
+
+instructor: Samuel A. Rebelsky
+
+instructor_title: Professor Rebelsky
+
+instructor_homepage: https://rebelsky.cs.grinnell.edu
+
+instructor_email: rebelsky@grinnell.edu
+
+meeting_times: Tu 3:00&ndash;4:50 p.m. CDT
+
+section_number: "01"
+
+office_hours:
+  - |
+    TBD (<a href="https://bit.ly/book-samr">book</a>) and by arrangement
+
+mentors:
+
+mentor_sessions:
+
+
+all_work_deadline: 11:59 PM on Wednesday, 24 March 2021
+# final_exam_time: TBD
+
+copyright: |
+  Copyright &copy; Samuel A. Rebelsky
+
+copyright_message: |
+  Unless specified otherwise elsewhere on this page,
+  this work is licensed under a Creative Commons Attribution 3.0 Unported
+  License. To view a copy of this license, visit
+  <http://creativecommons.org/licenses/by-nc/3.0/> or send a letter to Creative
+  Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+# Be picky about front-matter
+strict_front_matter: true
+
+# Set up collections for course content
+collections:
+  admin:
+    output: false
+
+  assignments:
+    output: true
+    permalink: /assignments/:path.html
+
+  eboards:
+    output: true
+    permalink: /eboards/:path.html
+
+  handouts:
+    output: true
+    permalink: /handouts/:path.html
+
+  las:
+    output: true
+    permalink: /las/:path.html
+
+  labs:
+    output: true
+    permalink: /labs/:path.html
+
+  links:
+    output: true
+    permalink: /links:path.html
+
+  problems:
+    output: false
+  
+  project:
+    output: true
+    permalink: /project/:path.html
+
+  readings:
+    output: true
+    permalink: /readings/:path.html
+
+  sandbox:
+    output: true
+    permalink: /sandbox/:path.html
+
+  stuff:
+    output: true
+    permalink: /stuff/:path.html
+
+# Default layouts
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  
+  - scope:
+      path: ""
+      type: assignments
+    values:
+      link: false
+      layout: assigned
+      collaboration: |
+        You must work individually on this assignment.
+        You may only discuss this assignment with the course staff.
+
+  - scope:
+      path: ""
+      type: exams
+    values:
+      link: false
+      layout: assigned
+ 
+  - scope:
+      path: ""
+      type: labs
+    values:
+      link: true
+      section: Lab
+      layout: assigned
+      no-due-message: |
+        Lab writeups are always due by Saturday 8:30 AM central the week they are assigned.
+        However as a general rule, try to complete labs *the day that they are assigned*, so that you do not fall behind!
+
+  - scope:
+      path: ""
+      type: project
+    values:
+      link: false
+      layout: assigned
+
+  - scope:
+      path: ""
+      type: readings
+    values:
+      link: true
+      layout: assigned
+
+  - scope:
+      path: ""
+      type: sandbox
+    values:
+      link: true
+      layout: assigned
+
+# Build settings
+exclude:
+  - vault
+  - assessments
+  - gradescope
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - Makefile
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    default_lang: drracket
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+
+# Plugin Settings
+plugins:
+  - jekyll-bootstrap-sass
+  - jekyll-include-cache
+
+bootstrap:
+  assets: true
