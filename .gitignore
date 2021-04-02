@@ -20,3 +20,6 @@ _sandbox
 .jekyll-cache/
 *.zip
 sandbox/
+*.dSYM/
+*.o
+*.s
