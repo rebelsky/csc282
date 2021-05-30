@@ -311,9 +311,9 @@ _This example is adapted from Kernighan and Plauger, I think._
 
 What does this do?
 
-    for (int i = 0; i < ROWS; i++)
-    for (int j = 0; j < COLS; j++)
-    M[i][j] = (i/j)*(j/i);
+    for (int i = 1; i <= ROWS; i++)
+    for (int j = 1; j <= COLS; j++)
+    M[i-1][j-1] = (i/j)*(j/i);
 
 
 Thinking in C: Your third example

@@ -15,31 +15,100 @@
   notes: ../eboards/eboard01
 
 - topic: Common Unix Tools
+  notes: ../eboards/eboard02
+  reading:
+    - title: Raymond, Chapter 1
 
 - topic: No Class
 
+- topic: Exploring a C project
+  reading:
+    - link: Formatting C code
+      url: https://rebelsky.cs.grinnell.edu/musings/cnix-formatting-c
+  lab: 
+    - page: Binary search
+  notes: ../eboards/eboard03
+  
 - topic: Thinking in C &amp; Unix, Revisited
-
-- topic: Simple Linux Tasks
+  reading:
+    - link: Binary search (1)
+      url: https://rebelsky.cs.grinnell.edu/musings/cnix-binary-search-1
+    - link: Binary search (2)
+      url: https://rebelsky.cs.grinnell.edu/musings/cnix-binary-search-2
+    - link: Binary search (3)
+      url: https://rebelsky.cs.grinnell.edu/musings/cnix-binary-search-3
+  notes: ../eboards/eboard04
 
 - topic: The Bash shell, a refresher
+  reading:
+    - link: Unix file basics
+      url: https://rebelsky.cs.grinnell.edu/musings/cnix-bash-basics-files
+    - link: Unix file permissions
+      url: https://rebelsky.cs.grinnell.edu/musings/cnix-file-permissions
+    - link: Command-line history
+      url: https://rebelsky.cs.grinnell.edu/musings/cnix-command-line-history
+  notes: ../eboards/eboard05
+
+- topic: Regular expressions
+  reading:
+    - link: GNU Grep Manual, Sections 3 (Regular Expressions) and 4 (Usage)
+      url: https://www.gnu.org/software/grep/manual/
+    - link: GNU Sed Manual, Sections 3 (`sed` scripts) and 4 (Addresses)
+      url: https://www.gnu.org/software/sed/manual/
+  notes: ../eboards/eboard06
 
 - topic: Automating work with Make 
-
-- topic: Exploring a C project
+  reading:
+    - link: A short introduction to Make
+      url: https://rebelsky.cs.grinnell.edu/musings/cnix-make-intro
+    - link: Variables in Make
+      url: https://rebelsky.cs.grinnell.edu/musings/cnix-make-variables
+    - link: Implicit rules in Make
+      url: https://rebelsky.cs.grinnell.edu/musings/cnix-make-implicit-rules
+  notes: ../eboards/eboard07
 
 - topic: Macros and the C preprocessor
+  reading: 
+    - link: The GNU CPP Manual
+      url: https://gcc.gnu.org/onlinedocs/cpp/
+  notes: ../eboards/eboard08
 
 - topic: More fun with macros
+  reading:
+    - link: The C Preprocessor
+      url: https://rebelsky.cs.grinnell.edu/musings/cnix-c-preprocessor
+    - link: An introduction to C macros
+      url: https://rebelsky.cs.grinnell.edu/musings/cnix-intro-macros
+    - link: Simple macros for testing C programs
+      url: https://rebelsky.cs.grinnell.edu/musings/cnix-simple-testing-macros
+    - link: Using macros for generic structures in C
+      url: https://rebelsky.cs.grinnell.edu/musings/cnix-macros-generics
+    - link: uthash user guide
+      url: http://troydhanson.github.io/uthash/userguide.html
+  notes: ../eboards/eboard09
 
-- topic: Understanding your code
+- topic: Exploring code
+  abbrev: exploring
+  notes: ../eboards/eboard10
+
+- topic: Exploring code, continued
+  notes: ../eboards/eboard11
+
+- topic: Fun with queues (and memory management and debugging)
+  notes: ../eboards/eboard12
 
 - topic: Command-line processing
-
-- topic: A Unix miscellany
-
-- topic: TBD
+  reading: 
+    - link: Man page for `getopt`
+    - link: Man page for `getopt_long`
+  notes: ../eboards/eboard13
 
 - topic: Wrapup
+  reading:
+    - link: Learn Vim for the Last Time
+      url: https://danielmiessler.com/study/vim/
+    - link: XKCD
+      url: https://xkcd.com
+  notes: ../eboards/eboard14
 
 - topic: TBD
