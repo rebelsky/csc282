@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "Warning: Make sure you know what you're doing!"
+echo -n "Password: "
+read password
