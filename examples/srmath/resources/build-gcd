@@ -1,4 +1,0 @@
-#/bin/bash
-cc -c -o gcd.o gcd.c
-cc -c -o srmath.o srmath.c
-cc -o gcd gcd.o srmath.o
