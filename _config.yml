@@ -1,8 +1,8 @@
 # Jekyll Site settings
-title: CSC 282-01 (2021SpT2)
+title: CSC 282-01 (2022Sp)
 
 baseurl: "/Courses/CSC282/2021SpT2"
-url: http://rebelsky.cs.grinnell.edu/Courses/CSC282/2021SpT2
+url: http://rebelsky.cs.grinnell.edu/Courses/CSC282/2022Sp
 
 # Set the theme color. Options are blue, green, red, orange, purple, and gray
 color: purple
@@ -15,20 +15,24 @@ instructor_homepage: https://rebelsky.cs.grinnell.edu
 
 instructor_email: rebelsky@grinnell.edu
 
-meeting_times: TuTh 3:00&ndash;4:50 p.m. CDT
+meeting_times: Th 2:30&ndash;3:50 p.m. CT
 
 section_number: "01"
 
 office_hours:
   - |
-    TBD (<a href="https://bit.ly/book-samr">book</a>) and by arrangement
+    TuTh 8:30--10:00.
+    Book office ours at <https://bit.ly/book-samr>.
+    You may also propose other meeting times.  Please check my Outlook
+    schedule first.
 
 mentors:
+  - Ned Watson
 
-mentor_sessions:
+mentor_sessions: TBD
 
+all_work_deadline:  5:00 PM on Friday, 20 May 2022
 
-all_work_deadline: 11:59 PM on Wednesday, 24 March 2021
 # final_exam_time: TBD
 
 copyright: |
