@@ -1,6 +1,0 @@
-#!/bin/bash
-
-PATH=.:$PATH
-export PATH
-
-perl --version
