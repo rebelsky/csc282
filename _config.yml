@@ -154,9 +154,7 @@ defaults:
 
 # Build settings
 exclude:
-  - vault
-  - assessments
-  - gradescope
+  - admin
   - README.md
   - Gemfile
   - Gemfile.lock
