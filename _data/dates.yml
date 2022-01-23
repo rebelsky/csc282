@@ -1,109 +1,201 @@
-- week: "Week 0"
-  num: 0
-  anchor: week00
-  days:
-    - { date: 2021-03-28 }
-    - { date: 2021-03-29 }
-    - { date: 2021-03-30 }
-    - { date: 2021-03-31 }
-    - { date: 2021-04-01, class: true }
-    - { date: 2021-04-02 }
-    - { date: 2021-04-03 }
-
 - week: "Week 1"
   num: 1
   anchor: week01
   days:
-    - { date: 2021-04-04 }
-    - { date: 2021-04-05 }
-    - { date: 2021-04-06, class: true }
-    - { date: 2021-04-07 }
-    - { date: 2021-04-08, class: true }
-    - { date: 2021-04-09 }
-    - { date: 2021-04-10 }
+    - { date: 2022-01-23 }
+    - { date: 2022-01-24 }
+    - { date: 2022-01-25 }
+    - { date: 2022-01-26 }
+    - { date: 2022-01-27, class: true }
+    - { date: 2022-01-28 }
+    - { date: 2022-01-29 }
 
 - week: "Week 2"
   num: 2
   anchor: week02
   days:
-    - { date: 2021-04-11 }
-    - { date: 2021-04-12 }
-    - { date: 2021-04-13, class: true }
-    - { date: 2021-04-14 }
-    - { date: 2021-04-15, class: true }
-    - { date: 2021-04-16 }
-    - { date: 2021-04-17 }
+    - { date: 2022-01-30 }
+    - { date: 2022-01-31 }
+    - { date: 2022-02-01 }
+    - { date: 2022-02-02 }
+    - { date: 2022-02-03, class: true }
+    - { date: 2022-02-04 }
+    - { date: 2022-02-05 }
 
 - week: "Week 3"
   num: 3
   anchor: week03
   days:
-    - { date: 2021-04-18 }
-    - { date: 2021-04-19 }
-    - { date: 2021-04-20, class: true }
-    - { date: 2021-04-21 }
-    - { date: 2021-04-22, class: true }
-    - { date: 2021-04-23 }
-    - { date: 2021-04-24 }
+    - { date: 2022-02-06 }
+    - { date: 2022-02-07 }
+    - { date: 2022-02-08 }
+    - { date: 2022-02-09 }
+    - { date: 2022-02-10, class: true }
+    - { date: 2022-02-11 }
+    - { date: 2022-02-12 }
 
 - week: "Week 4"
   num: 4
   anchor: week04
   days:
-    - { date: 2021-04-25 }
-    - { date: 2021-04-26 }
-    - { date: 2021-04-27, class: true }
-    - { date: 2021-04-28 }
-    - { date: 2021-04-29, class: true }
-    - { date: 2021-04-30 }
-    - { date: 2021-05-01 }
+    - { date: 2022-02-13 }
+    - { date: 2022-02-14 }
+    - { date: 2022-02-15 }
+    - { date: 2022-02-16 }
+    - { date: 2022-02-17, class: true }
+    - { date: 2022-02-18 }
+    - { date: 2022-02-19 }
 
 - week: "Week 5"
   num: 5
   anchor: week05
   days:
-    - { date: 2021-05-02 }
-    - { date: 2021-05-03 }
-    - { date: 2021-05-04, class: true }
-    - { date: 2021-05-05 }
-    - { date: 2021-05-06, class: true }
-    - { date: 2021-05-07 }
-    - { date: 2021-05-08 }
+    - { date: 2022-02-20 }
+    - { date: 2022-02-21 }
+    - { date: 2022-02-22 }
+    - { date: 2022-02-23 }
+    - { date: 2022-02-24, class: true }
+    - { date: 2022-02-25 }
+    - { date: 2022-02-26 }
 
 - week: "Week 6"
   num: 6
   anchor: week06
   days:
-    - { date: 2021-05-09 }
-    - { date: 2021-05-10 }
-    - { date: 2021-05-11, class: true }
-    - { date: 2021-05-12 }
-    - { date: 2021-05-13, class: true }
-    - { date: 2021-05-14 }
-    - { date: 2021-05-15 }
+    - { date: 2022-02-27 }
+    - { date: 2022-02-28 }
+    - { date: 2022-03-01 }
+    - { date: 2022-03-02 }
+    - { date: 2022-03-03, class: true }
+    - { date: 2022-03-04 }
+    - { date: 2022-03-05 }
 
 - week: "Week 7"
   num: 7
   anchor: week07
   days:
-    - { date: 2021-05-16 }
-    - { date: 2021-05-17 }
-    - { date: 2021-05-18, class: true }
-    - { date: 2021-05-19 }
-    - { date: 2021-05-20, class: true }
-    - { date: 2021-05-21 }
-    - { date: 2021-05-22 }
+    - { date: 2022-03-06 }
+    - { date: 2022-03-07 }
+    - { date: 2022-03-08 }
+    - { date: 2022-03-09 }
+    - { date: 2022-03-10, class: true }
+    - { date: 2022-03-11 }
+    - { date: 2022-03-12 }
 
-- week: "Finals (Half-)Week"
+- week: "Week 8"
+  num: 8
+  anchor: week08
+  days: 
+    - { date: 2022-03-13 }
+    - { date: 2022-03-14 }
+    - { date: 2022-03-15 }
+    - { date: 2022-03-16 }
+    - { date: 2022-03-17, class: true }
+    - { date: 2022-03-18 }
+    - { date: 2022-03-19 }
+
+- week: "Spring Break"
+  break: true
+  days:
+    - { date: 2022-03-20 }
+    - { date: 2022-03-21 }
+    - { date: 2022-03-22 }
+    - { date: 2022-03-23 }
+    - { date: 2022-03-24 }
+    - { date: 2022-03-25 }
+    - { date: 2022-03-26 }
+
+    - { date: 2022-03-27 }
+    - { date: 2022-03-28 }
+    - { date: 2022-03-29 }
+    - { date: 2022-03-30 }
+    - { date: 2022-03-31 }
+    - { date: 2022-04-01 }
+    - { date: 2022-04-02 }
+
+- week: "Week 9"
+  num: 9
+  anchor: week09
+  days: 
+    - { date: 2022-04-03 }
+    - { date: 2022-04-04 }
+    - { date: 2022-04-05 }
+    - { date: 2022-04-06 }
+    - { date: 2022-04-07, class: true }
+    - { date: 2022-04-08 }
+    - { date: 2022-04-09 }
+
+- week: "Week 10"
+  num: 10
+  anchor: week10
+  days:
+    - { date: 2022-04-10 }
+    - { date: 2022-04-11 }
+    - { date: 2022-04-12 }
+    - { date: 2022-04-13 }
+    - { date: 2022-04-14, class: true }
+    - { date: 2022-04-15 }
+    - { date: 2022-04-16 }
+
+- week: "Week 11"
+  num: 11
+  anchor: week11
+  days:
+    - { date: 2022-04-17 }
+    - { date: 2022-04-18 }
+    - { date: 2022-04-19 }
+    - { date: 2022-04-20 }
+    - { date: 2022-04-21, class: true }
+    - { date: 2022-04-22 }
+    - { date: 2022-04-23 }
+
+- week: "Week 12"
+  num: 12
+  anchor: week12
+  days: 
+    - { date: 2022-04-24 }
+    - { date: 2022-04-25 }
+    - { date: 2022-04-26 }
+    - { date: 2022-04-27 }
+    - { date: 2022-04-28, class: true }
+    - { date: 2022-04-29 }
+    - { date: 2022-04-30 }
+
+- week: "Week 13"
+  num: 13
+  anchor: week13
+  days:
+    - { date: 2022-05-01 }
+    - { date: 2022-05-02 }
+    - { date: 2022-05-03 }
+    - { date: 2022-05-04 }
+    - { date: 2022-05-05, class: true }
+    - { date: 2022-05-06 }
+    - { date: 2022-05-07 }
+
+- week: "Week 14"
+  num: 14
+  anchor: week14
+  days:
+    - { date: 2022-05-08 }
+    - { date: 2022-05-09 }
+    - { date: 2022-05-10 }
+    - { date: 2022-05-11 }
+    - { date: 2022-05-12, class: true }
+    - { date: 2022-05-13 }
+    - { date: 2022-05-14 }
+
+- week: "Finals Week"
   anchor: finals
   days:
-    - { date: 2021-05-23 }
-    - { date: 2021-05-24 }
-    - { date: 2021-05-25 }
-    - { date: 2021-05-26 }
-    - { date: 2021-05-27 }
-    - { date: 2021-05-28 }
-    - { date: 2021-05-29 }
+  days:
+    - { date: 2022-05-15 }
+    - { date: 2022-05-16 }
+    - { date: 2022-05-17 }
+    - { date: 2022-05-18 }
+    - { date: 2022-05-19 }
+    - { date: 2022-05-20 }
+    - { date: 2022-05-21 }
 
 - week: "Summer"
   break: true
