@@ -94,18 +94,23 @@ Learning Goals
 
 Our major objectives for this course include:
 
-  - Improving your overall software design skills
-  - Enhancing your understanding of the C model of programming
-  - Making you a more facile *nix user
+* Improving your overall software design skills
+* Enhancing your understanding of the C model of programming
+* Making you a more facile \*nix user
 
 Important Notices
 -----------------
 
-  - As is typical, I am over-booked this semester.  I apologize.
-  - I wrote a series of essay for this course the last time I taught
-    it.  I'm probably revising them this semester and writing a few
-    more.  I apologize if they are less clear than professional
-    writing.
+* As is typical, I am over-booked this semester.  I apologize.
+* I have also committed myself to a reasonable work life (40--50 hours
+  per week).  That means that I may get less work doen than you or I would 
+  like.
+* I wrote a series of essay for this course one of the previous times
+  that I taught it.  I'm probably revising them this semester and writing 
+  a few more.  I apologize if they are less clear than professional
+  writing.
+* Our course syllabus will change to adapt to the needs and interests
+  of the class.
 
 Accommodations and adjustments
 ------------------------------
@@ -119,9 +124,9 @@ This course is offered for one credit and is graded as S/D/F.  College
 guidelines dictate that one-credit courses require about forty-five
 hours of total work.  All students are expected to ...
 
-* attend at least eleven of the thirteen class meetings;
+* attend at least twelve of the fourteen class meetings;
 * do all of the assigned readings (about 30 minutes per class);
-6 spend an appropriate amount of time on each homework assignment (about
+* spend an appropriate amount of time on each homework assignment (about
   60 minutes per class); and
 * participate actively in class.
 
@@ -131,6 +136,9 @@ do not will likely earn a lower grade.
 Textbooks and Other Readings
 ----------------------------
 
+Chacon, Scott and Straub, Ben (2014).  _Pro Git_, 2nd Edition.  Apress. Also
+available online at <https://git-scm.com/book/en/v2>. 
+
 Mecklenburg, Robert (2004).  _Managing Projects with GNU Make_, Third
 Edition. Sebastapol, CA: O'Reilly and Associates. Also available online
 at <http://oreilly.com/catalog/make3/book/index.csp>.
@@ -139,7 +147,7 @@ Raymond, Eric S. (2003). _The Art of UNIX
 Programming_. Addison-Wesley, Professional. Also available
 online at <http://www.catb.org/esr/writings/taoup/html/>.
 
-Rebelsky, Samuel A. (2021).  _Don't Embarrass Me; Don't
+Rebelsky, Samuel A. (2022).  _Don't Embarrass Me; Don't
 Embarrass Yourself: Thoughts on Thinking in C and *nix_.
 An e-book (or something similar) in progress available at
 <http://www.cs.grinnell.edu/~rebelsky/musings/index-cnix>.
@@ -167,15 +175,15 @@ Participation
 Because much of our work in this course involves collaboration and discussion, you will be evaluated on your participation.
 Participating in class involves:
 
- - being present in class (physically and mentally)
- - coming to class on time
- - coming to class prepared
- - asking questions when appropriate
- - making positive contributions to class discussion by volunteering and when called upon
- - staying on task during lab exercises, and
- - working effectively with your partner(s)
+* being present in class (physically and mentally)
+* coming to class on time
+* coming to class prepared
+* asking questions when appropriate
+* making positive contributions to class discussion by volunteering and when called upon
+* staying on task during lab exercises, and
+* working effectively with your partner(s)
 
-In my experience, students come to this class with incredibly varied backgrounds.  Please don't let your experience negatively affect others.
+In my experience, students come to this class with incredibly varied backgrounds.  
 
 Academic Honesty
 ----------------
