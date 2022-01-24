@@ -167,7 +167,7 @@ Attendance
 
 Your classmates and partners depend on your contributions to learn new material and complete the required work for this course. *Don't let them down!* You are expected to arrive on time and actively participate in every class.
 
-If your are sick, *please do not come to class.* Stay in your room, rest, and seek medical care as needed. [Student Health and Counciling Services (SHACS)](http://www.grinnell.edu/about/offices-services/student-health) offers health and mental health services to students.
+If you are sick, *please do not come to class.* Stay in your room, rest, and seek medical care as needed. [Student Health and Counciling Services (SHACS)](http://www.grinnell.edu/about/offices-services/student-health) offers health and mental health services to students.
 
 Participation
 -------------
