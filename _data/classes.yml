@@ -20,6 +20,7 @@
     We consider some basic Unix tools along with ways of thinking in Unix.
   reading:
     - Raymond, Chapter 1
+    - Pro Git, Chapters 1 and 2
 
 - topic: Exploring a C project
   reading:
@@ -92,7 +93,7 @@
     - link: Man page for `getopt`
     - link: Man page for `getopt_long`
 
-- topic: No Class
+- topic: TBD
 
 - topic: Wrapup
   reading:
@@ -101,4 +102,3 @@
     - link: XKCD
       url: https://xkcd.com
 
-- topic: TBD
