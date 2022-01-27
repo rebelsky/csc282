@@ -1,13 +1,4 @@
-- date: 2021-04-29
+- date: 2022-02-03
   due:
-    - link: "Task 08a - Including files"
-      url: https://teams.microsoft.com/l/channel/19%3af31451429d71416ca14848a5172515aa%40thread.tacv2/Task%252008a%2520-%2520Including%2520files%2520(due%25202021-04-29)?groupId=32394573-b837-4c0f-b7b5-aeec3e347a0b&tenantId=524f9e3e-faca-4f64-b3ec-adb2baee8807
-    - link: "Test 08b - Useful kacros"
-      url: https://teams.microsoft.com/l/channel/19%3aaf60fd3fa24c4d649b2f2cb30a465687%40thread.tacv2/Task%252008b%2520-%2520Useful%2520macros%2520(due%25202021-04-29)?groupId=32394573-b837-4c0f-b7b5-aeec3e347a0b&tenantId=524f9e3e-faca-4f64-b3ec-adb2baee8807
-
-- date: 2021-05-04
-  due:
-    - link: "Test 09b - Groking utstack"
-      url: https://teams.microsoft.com/l/channel/19%3ae114631658e84764b72b80c75bb70c55%40thread.tacv2/Task%252009a%2520-%2520Groking%2520utstack%2520(due%25202021-05-04)?groupId=32394573-b837-4c0f-b7b5-aeec3e347a0b&tenantId=524f9e3e-faca-4f64-b3ec-adb2baee8807
-    - link: "Test 09a - Using uthash"
-      url: https://teams.microsoft.com/l/channel/19%3a88df62dbac2347eab28abb27a0549463%40thread.tacv2/Task%252009b%2520-%2520Using%2520uthash%2520(due%25202021-05-04)?groupId=32394573-b837-4c0f-b7b5-aeec3e347a0b&tenantId=524f9e3e-faca-4f64-b3ec-adb2baee8807
+    - page: /assignments/unix-tools.html
+    - page: /assignments/unix-tasks.html
