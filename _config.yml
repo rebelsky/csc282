@@ -1,7 +1,7 @@
 # Jekyll Site settings
 title: CSC 282-01 (2022Sp)
 
-baseurl: "/Courses/CSC282/2021SpT2"
+baseurl: "/Courses/CSC282/2022Sp"
 url: http://rebelsky.cs.grinnell.edu/Courses/CSC282/2022Sp
 
 # Set the theme color. Options are blue, green, red, orange, purple, and gray
@@ -110,8 +110,8 @@ defaults:
       link: false
       layout: assigned
       collaboration: |
-        You must work individually on this assignment.
-        You may only discuss this assignment with the course staff.
+        You may obtain help on this assignment from anyone you wish.
+        You must cite any help you obtain.
 
   - scope:
       path: ""
