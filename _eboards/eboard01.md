@@ -15,6 +15,7 @@ _Approximate overview_
 * Lots of administrative stuff, including attendance
 * Some course background
 * Approximate learning goals
+* Notes from surveys
 * Sample C code
 
 Administrative stuff
@@ -24,7 +25,7 @@ Administrative stuff
 
 * Welcome back to campus!
 * Hi, I'm Sam (or SamR).  
-* Ned is our class mentor.
+* Ned (Learnèd) is our class mentor.
 * The class Web site is (or will be) at 
   <https://rebelsky.cs.grinnell.edu/Courses/CSC282/2022Sp/>.
     * Sam: Don't forget to put that in the chat.
@@ -34,38 +35,48 @@ Administrative stuff
     * Sam: Don't forget to show off today's eboard.
     * Don't just rely on mine; evidence suggests taking your own notes 
       helps you learn.
+* I have four C programs (or programming problems) to discuss.  We 
+  probably won't get to them all.
+* Your GitHub username may reveal your identity to your classmates.
+  (Required warning.)
 
 ### Upcoming Activities
 
-### Work for Tuesday
+* Thursday extras today!
+
+### Work for next Thursday
+
+* [Suggest Unix Tools/Commands](../assignments/unix-tools)
+* [Try to solve simple problems in Unix](../assignments/unix-tasks)
+* Read Raymond, Chapter 1.
 
 ### Attendance
 
 * Sam will (attempt to) call you by first name.
 * You will respond with 
-    * Hi, my name is PROPER NAME.
+    * Hi, my name is PROPER-NAME FAMILY-NAME.
+    * I prefer that you call me NAME.
     * (Optional pronouns.)
-    * If you must call me by last name, please call me Mr./Ms./Mx./Scholar
-      FAMILY NAME.
-    * I'm taking CSC-282 because ...
-    * This semester , I am excited about ....
-    * (Optional question for me.  You'll also have another chance later.)
+    * Class year and major.
+    * Highlight of Winter break.
+    * (Optional question for me.  You'll also have other chances later.)
 
-Stuff from attendance
+Notes from attendance
 ---------------------
 
-### Taking CSC-282 because
+### Highlight
 
-### Excited about
-
-### Q&A
+### Questions
 
 About the course
 ----------------
 
 ### What I hope you get out of it
 
-* Think better about C
+* More comfort with GitHub
+    * ITS policies meant that some/many of you did not learn GitHub
+      in 207/324.
+* Think better about C (and development for C)
     * Understand some command-line flags and how to (ab)use them
     * Think better about memory and how malloc works
     * Get used to building larger C program
@@ -111,6 +122,55 @@ To get an S
 * The site is now live-ish.  Time for a quick walkthrough.
 * The schedule is adaptable.  I will plan for change.
 
+What I learned from the survey
+------------------------------
+
+Why?
+
+* Majority of you interested in more C.
+* A few "I need a one-credit class".
+* A few "It's a Sam class." or "I want to take more classes with the
+  other folks in the CS community."
+* A bit less "I should know Unix"
+
+GitHub
+
+* More of you know more and are more confident than I had thought.
+* I guess I was expecting more folks who had one of the recent 207's.
+* Some folks know essentially nothing.  That's okay.
+* Confidence seemed to switch with `.gitignore` (more strongly disagrees)
+* "Although I understand-ish git, I have a healthy respect (fear) of its power."
+* "I struggle with complicated branch conflicts and some of the lesser-used Git commands (rebase…? Reset, revert, etc)"
+
+Make
+
+* Fewer people can use or are confident with Make.
+* A few more expert Make users.
+* A non-trivial number have never used them.
+* Just so you know, Make is a program that lets you automate build
+  processes.  It's most typically used to build larger C programs,
+  but it can be used for almost any set of interdependent build tasks.
+    * CC is building a better Make.
+
+The C Programming Language
+
+* I was surprised to see that about half of you have written macros.
+* The vast majority of you seem comfortable with multi-file C projects.
+* The vast majority do not or cannot use debuggers.
+* One interesting comment: "Alarming".
+
+Unix
+
+* Confidence and knowledge generally low; a few experts.
+
+Goals / Comments
+
+* "All of the above"
+* "I want the personal integrity to work on learning computer science in my personal life but I resent this obligation"
+* "I'm beginning to wonder if I'm even ready for this course or not."
+* "sockets, cross-platform C, some of the stuff that make https://justine.lol/ape.html work"
+* "Anything else you think a "modern" computer scientist should be embarrassed not to know."
+
 Thinking in C: Your first example
 ---------------------------------
 
@@ -148,9 +208,21 @@ What does this do?
     for (int j = 1; j <= COLS; j++)
     M[i-1][j-1] = (i/j)*(j/i);
 
-
 Thinking in C: Your third example
 ---------------------------------
+
+_I've inserted this one because many of you said you were comfortable
+with multiple-file projects._
+
+Suppose I'm working on a semi-reusable math library that includes
+a procedure, `long gcd (long x, long y)`.
+
+What files would be part of the project?
+
+What commands would we use to build the various executables?
+
+Thinking in C: Your fourth example
+----------------------------------
 
 _This one will be fun, because I'll need to figure it out again._
 
