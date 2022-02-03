@@ -26,6 +26,10 @@
   reading:
     - link: Formatting C code
       url: https://rebelsky.cs.grinnell.edu/musings/cnix-formatting-c
+    - link: Making the best use of C
+      url: https://www.gnu.org/prep/standards/html_node/Writing-C.html
+    - link: _Managing Projects with GNU Make_, Chapter 1
+      url: https://www.oreilly.com/openbook/make3/book/ch01.pdf
   lab: 
     - page: Binary search
   
