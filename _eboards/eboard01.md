@@ -28,11 +28,9 @@ Administrative stuff
 * Ned (Learnèd) is our class mentor.
 * The class Web site is (or will be) at 
   <https://rebelsky.cs.grinnell.edu/Courses/CSC282/2022Sp/>.
-    * Sam: Don't forget to put that in the chat.
     * The class Web site is (always) a work in progress.
 * I type our class notes in a format called "markdown".  You should
   find it relatively readable.  It permits me to make nice Web pages.
-    * Sam: Don't forget to show off today's eboard.
     * Don't just rely on mine; evidence suggests taking your own notes 
       helps you learn.
 * I have four C programs (or programming problems) to discuss.  We 
@@ -49,6 +47,7 @@ Administrative stuff
 * [Suggest Unix Tools/Commands](../assignments/unix-tools)
 * [Try to solve simple problems in Unix](../assignments/unix-tasks)
 * Read Raymond, Chapter 1.
+* Read Git book, Chapters 1 and 2.
 
 ### Attendance
 
@@ -64,9 +63,31 @@ Administrative stuff
 Notes from attendance
 ---------------------
 
-### Highlight
-
-### Questions
+* Visiting San Francisco.
+* Visiting Seattle.
+* Visiting Portland.
+* Visiting Miami.
+* Family! [x4]
+* Good sleep.
+* Applications for REU.
+* Back home far away.
+* Removing wisdom teeth.
+* Walking dog (or vice versa).
+* Living along / Adulting.
+* Unwinding.
+* Winter Soccer.
+* Climbing rocks and boulders.
+* Running.
+* Good food [x2]
+* Reading books
+* Tv Shows and Movies [x2]
+* Cross-Country Skiing.
+* Downhill skiing.
+* Using inferior email programs.
+* Snowboarding.
+* Help Desk!
+* Cabining along with sliding on ice and climbing mountains. 
+* Doing very little!
 
 About the course
 ----------------
@@ -146,7 +167,7 @@ Make
 
 * Fewer people can use or are confident with Make.
 * A few more expert Make users.
-* A non-trivial number have never used them.
+* A non-trivial number have never used Make.
 * Just so you know, Make is a program that lets you automate build
   processes.  It's most typically used to build larger C programs,
   but it can be used for almost any set of interdependent build tasks.
@@ -158,6 +179,7 @@ The C Programming Language
 * The vast majority of you seem comfortable with multi-file C projects.
 * The vast majority do not or cannot use debuggers.
 * One interesting comment: "Alarming".
+* C is Powerful and fearesome.
 
 Unix
 
@@ -166,7 +188,7 @@ Unix
 Goals / Comments
 
 * "All of the above"
-* "I want the personal integrity to work on learning computer science in my personal life but I resent this obligation"
+* "I want the personal integrity to work on learning computer science in my personal life but I resent this obligation".
 * "I'm beginning to wonder if I'm even ready for this course or not."
 * "sockets, cross-platform C, some of the stuff that make https://justine.lol/ape.html work"
 * "Anything else you think a "modern" computer scientist should be embarrassed not to know."
@@ -186,16 +208,77 @@ I've reformatted it slightly from the original in K&R.
 
 What does it do?  (What's the goal?)
 
+* This is `strcpy`.
+* Copies string `s` to string `t`.
+* Returns a string equivalent to s.
+
 How does it work?
 
+* Dereference `t` and `s` and assign.  (`*t = *s`).  This
+  stores the current character in s in the locatoin that t points
+  to.
+* Incrementing a pointer moves to the next character.
+
+Why does the while loop terminate?
+
+* Requires that we understand the value of an assignment expression.
+* When the value of the assignment statement is 0.
+* The value of an assignment statement is the value assigned.
+* When we assign the null terminator in a string, the value of the
+  assignment is 0.
+
 Where does `t` point after this is done?
+
+* The memory location after the copied `s` (after the null terminator)
+* Why return that instead of, say, the original `t` or the original `s`
+  or ...
+    * So that we know where the end of the first string is.
+    * We could find that, but it's expensive.
+    * If we are appending a lot of strings using strcpy, this is
+      much cheaper.
+        * `tmp = strcpy(list-of-students, "Sam");`
+        * `tmp = strcpy (tmp-1, ",Janet");`
+        * `tmp = strcpy (tmp-1, ",Evening");`
 
 What are the preconditions?  What do we need to know for the code to
 work correctly?
 
-How can we make it better?
+* In order for this not to screw up massively, we need to ensure that
+  the memory pointed to by `t` has at least `strlen(s)` additional
+  space.
+* Of course, every good programmer knows exactly how much space they
+  have available through close analysis.
+    * Or uses tools to help them identify why things break.
+* Not worrying about this is why the Internet regularly breaks.
 
+Alternative
+
+    char *
+    fun (char *t, char *s)
+    {
+      // Continue until we reach the end of the source.
+      while (*s != '\0') 
+        {
+          // Copy a character
+          *t = *s;
+          // Move on to the next space
+          ++t;
+          ++s;
+        }
+      // Add the null terminator
+      *t = '\0';
+      t++;
+      // And we're done
+      return t;
+    } // fun
+
+What does it do?  (What's the goal?)
 What should we have learned?
+
+* C programmers think differently. 
+* Pay attention to memory.
+* Concise to the point of difficulty.  (Concision may have been
+  necessary to fit your program in RAM.)
 
 Thinking in C: Your second example
 ----------------------------------
@@ -204,9 +287,29 @@ _This example is adapted from Kernighan and Plauger, I think._
 
 What does this do?
 
+    int M[ROWS][COLS];
     for (int i = 1; i <= ROWS; i++)
     for (int j = 1; j <= COLS; j++)
     M[i-1][j-1] = (i/j)*(j/i);
+
+Written a more readable form.
+
+    for (int i = 1; i <= ROWS; i++)
+      {
+        for (int j = 1; j <= COLS; j++)
+          {
+            M[i-1][j-1] = (i/j)*(j/i);
+          } // for each column
+      } // for each row
+
+Hypothesis 1: It assigns 1 to each element of `M`.  (Fills the matrix with 1's)
+
+Hypothesis 2: It creates the identity matrix, more or less.  If
+i and j are equal, you fill in a 1.  If i and j are not equal, the
+one of the terms will be 0 and so the product will be 0.
+
+Note: C programmers like clever tricks (perhaps because it makes others
+feel dumb).
 
 Thinking in C: Your third example
 ---------------------------------
