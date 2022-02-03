@@ -308,11 +308,15 @@ Hypothesis 2: It creates the identity matrix, more or less.  If
 i and j are equal, you fill in a 1.  If i and j are not equal, the
 one of the terms will be 0 and so the product will be 0.
 
+Hypothesis 2 is correct.
+
 Note: C programmers like clever tricks (perhaps because it makes others
 feel dumb).
 
 Thinking in C: Your third example
 ---------------------------------
+
+[We did not get this far.]
 
 _I've inserted this one because many of you said you were comfortable
 with multiple-file projects._
@@ -326,6 +330,8 @@ What commands would we use to build the various executables?
 
 Thinking in C: Your fourth example
 ----------------------------------
+
+[We did not get this far.]
 
 _This one will be fun, because I'll need to figure it out again._
 
