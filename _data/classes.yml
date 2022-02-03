@@ -21,6 +21,7 @@
   reading:
     - Raymond, Chapter 1
     - Pro Git, Chapters 1 and 2
+  notes: ../eboards/eboard02
 
 - topic: Exploring a C project
   reading:
