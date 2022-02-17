@@ -2,3 +2,7 @@
   due:
     - page: /assignments/unix-tools.html
     - page: /assignments/unix-tasks.html
+
+- date: 2022-02-24
+  due:
+    - page: /assignments/shell-scripts.html

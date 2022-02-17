@@ -33,6 +33,7 @@
       url: https://www.oreilly.com/openbook/make3/book/ch01.pdf
   lab: 
     - page: Binary search
+  notes: ../eboards/eboard03
   
 - topic: Thinking in C &amp; Unix, Revisited
   reading:
@@ -42,6 +43,7 @@
       url: https://rebelsky.cs.grinnell.edu/musings/cnix-binary-search-2
     - link: Binary search (3)
       url: https://rebelsky.cs.grinnell.edu/musings/cnix-binary-search-3
+  notes: ../eboards/eboard04
 
 - topic: The Bash shell, a refresher
   reading:
