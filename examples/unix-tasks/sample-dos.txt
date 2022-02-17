@@ -1,0 +1,6 @@
+Hello
+World
+In the Unix world, lines of text end with backslash-n.
+In the Microsoft world, lines of text end with backslash-r backslash-n.
+Why the difference?
+Perhaps the designers used different kinds of typewriters.
