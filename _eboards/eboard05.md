@@ -34,7 +34,7 @@ Shell Scripting Basics
 
 _Just because I don't know how much of this you learned on your own._
 
-### To write an algoirthm, you need ...
+### To write an algorithm, you need ...
 
 * Naming
 * Conditionals
@@ -126,7 +126,7 @@ _Just because I don't know how much of this you learned on your own._
     >   echo $RESULT
     > }
     $ add 2 3
-    6
+    5
     ```
 
 Your shell scripts 
@@ -138,3 +138,17 @@ _Note: I appreciate the hard work I see in many of the scripts.  However,
 I will still suggest improvements (i.e., make fun of them)._
 
 Some comments as we go ...
+
+* `alias wordle="python wordle.cpython.pyc"`
+* If you're going to share with another human being, comment.
+* If you might forget how to use it and bad use can corrupt things,
+  add error checking.
+* It's good to check before clobbering a file, even if you're Ben Grimm.
+* Try not to clobber files.
+    * Option 1: Have something that tries for file.txt then file1.txt then file2.txt then file3.txt ...
+    * Traditional option: use `/tmp/file.$$` 
+    * Option 3: Embrace Ben Grimm
+* Multiple ways to get counts
+    * `wc -w verbs.txt | cut -d' ' -f 1`
+    * `wc -w < verbs.txt`
+* Be careful about violating trademark.
