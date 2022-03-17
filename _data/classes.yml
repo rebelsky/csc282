@@ -62,6 +62,8 @@
     - link: GNU Sed Manual, Sections 3 (`sed` scripts) and 4 (Addresses)
       url: https://www.gnu.org/software/sed/manual/
 
+- topic: Class cancelled
+
 - topic: Automating work with Make 
   reading:
     - link: A short introduction to Make
@@ -70,6 +72,7 @@
       url: https://rebelsky.cs.grinnell.edu/musings/cnix-make-variables
     - link: Implicit rules in Make
       url: https://rebelsky.cs.grinnell.edu/musings/cnix-make-implicit-rules
+  notes: ../eboards/eboard08
 
 - topic: Macros and the C preprocessor
   reading: 
@@ -100,8 +103,6 @@
   reading: 
     - link: Man page for `getopt`
     - link: Man page for `getopt_long`
-
-- topic: TBD
 
 - topic: Wrapup
   reading:
