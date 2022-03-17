@@ -62,6 +62,8 @@
     - link: GNU Sed Manual, Sections 3 (`sed` scripts) and 4 (Addresses)
       url: https://www.gnu.org/software/sed/manual/
 
+- topic: Class cancelled
+
 - topic: Automating work with Make 
   reading:
     - link: A short introduction to Make
@@ -100,8 +102,6 @@
   reading: 
     - link: Man page for `getopt`
     - link: Man page for `getopt_long`
-
-- topic: TBD
 
 - topic: Wrapup
   reading:
