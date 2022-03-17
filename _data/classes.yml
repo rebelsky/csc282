@@ -72,6 +72,7 @@
       url: https://rebelsky.cs.grinnell.edu/musings/cnix-make-variables
     - link: Implicit rules in Make
       url: https://rebelsky.cs.grinnell.edu/musings/cnix-make-implicit-rules
+  notes: ../eboards/eboard08
 
 - topic: Macros and the C preprocessor
   reading: 
