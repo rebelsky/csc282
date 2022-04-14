@@ -2,7 +2,7 @@
 title: "EBoard 09: Make and Makefiles, continued (+ Macros)"
 number: 9
 section: eboards
-held: 2022-03-17
+held: 2022-04-06
 link: true
 ---
 # {{ page.title }}
@@ -20,7 +20,7 @@ _Approximate overview_
     * Adding variables
     * Adding automatic variables
     * Adding generic rules
-* The C Preprocessor (if there's time)
+* Macros and The C Preprocessor (if there's time)
 
 Administrivia
 -------------
@@ -30,11 +30,13 @@ Administrivia
 * Non-seniors: 
     * We do have another special topics course in the spring.
     * If we hire a visitor, we'll have more offerings.
+* Reminder: There is a new variant of Omicron
 * For next week, skim the GNU C preprocessor manual.
 * Note: Until you write your own Makefiles (or whatever), you won't
   retain much of this info.  But you'll know what's possible, which
   will help you look for things.
 * We miss all of you who are absent.
+* You may want to read <https://gankra.github.io/blah/c-isnt-a-language/>
 
 Where we were
 -------------
@@ -98,6 +100,14 @@ srtest.o: srtest.c srtest.h
 Cleaning up our code
 --------------------
 
+* Separate tests from other executables.
+* Don't build the executable until the tests work.
+
+```
+gcd: gcd.o srgcd.o gcd-test
+        cc gcd.o srgcd.o -o gcd
+```
+
 Adding a second utility function
 --------------------------------
 
@@ -112,7 +122,56 @@ Adding variables
 Suppose we wanted to set the flags for the C compiler.  How many
 lines do we have to change?
 
+* A lot.
+* Our solution: Use variables
+
+```
+CFLAGS = -Wall -O4
+
+LDFLAGS = -fsanitize=address -g
+```
+
 What else about the Makefile makes you cringe a bit?
+
+### Repeated file names
+
+```
+srmath.so: srgcd.o srexpmod.o
+        cc srgcd.o srexpmod.o -shared -o libsrmath.so
+```
+
+fixing
+
+```
+G = srgcd.o srexpmod.o
+srmath.so: $(G)
+        cc $(G) -shared -o libsrmath.so
+```
+
+Achieves three things: Less to write; easier to change if we add another
+.o file, clarifies that the two lists of identical names are intended to
+be identical
+
+This is *not* the solution we should use.
+
+### Repeated commands
+
+```
+gcd.o: gcd.c srmath.h
+        cc $(CFLAGS) -c gcd.c -o gcd.o
+
+srgcd.o: srgcd.c srmath.h
+        cc $(CFLAGS) -c srgcd.c -o srgcd.o
+
+expmodtest.o: expmodtest.c srmath.h srtest.h
+        cc $(CFLAGS) -c expmodtest.c -o expmodtest.o
+
+gcdtest.o: gcdtest.c srmath.h srtest.h
+        cc $(CFLAGS) -c gcdtest.c -o gcdtest.o
+
+srtest.o: srtest.c srtest.h
+        cc $(CFLAGS) -c srtest.c -o srtest.o
+```
 
 Adding automatic variables
 --------------------------
@@ -121,16 +180,65 @@ $@ the target
 $^ the dependencies
 $< the first dependency
 
+```
+gcd.o: gcd.c srmath.h
+        cc $(CFLAGS) -c $< -o $@
+
+srgcd.o: srgcd.c srmath.h
+        cc $(CFLAGS) -c $< -o $@
+
+expmodtest.o: expmodtest.c srmath.h srtest.h
+        cc $(CFLAGS) -c $< -o $@
+
+gcdtest.o: gcdtest.c srmath.h srtest.h
+        cc $(CFLAGS) -c $< -o $@
+
+srtest.o: srtest.c srtest.h
+        cc $(CFLAGS) -c $< -o $@
+```
+
 Using generic rules
 -------------------
 
 How do we say "To build a .o file from a .c file, do the following"?  (or
 anything similar)
 
+```
+%.o: %.c
+        cc $(CFLAGS) -c $< -o $@
+```
+
+Whoops, we still need dependencies.
+
+```
+*.o: srmath.h
+```
+
+We have the test files, too.
+
+```
+gcdtest.o: srtest.h
+expmodtest.o: srtest.h
+```
+
+Yes, you can put header dependencies on lots of different lines.
+
+Make wrapup
+-----------
+
 Macros
 ------
 
 * Somewhat like functions, except that they work at compile time, with
-  program text, rather that an run time, with real values.
+  program text, rather that at run time, with in-memory values
 * `#define NAME(PARAMS) CODE`
 
+```
+define SQUARE(X) X*X
+```
+
+One advantage: Inlined code is generally faster than procedure calls.
+
+Problems: Since it's textual replacement, we sometimes get different
+behavior than we'd like.  Parentheses are our friends.  (And you thought
+Scheme was bad.)
