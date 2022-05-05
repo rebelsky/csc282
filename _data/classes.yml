@@ -109,11 +109,11 @@
     - Man page for `getopt_long`
     - link: C isn't a language
       url: https://gankra.github.io/blah/c-isnt-a-language/
+  notes: ../eboards/eboard13
 
 - topic: Wrapup
   reading:
+    - Two TMUX readings of your choice
     - link: Learn Vim for the Last Time
       url: https://danielmiessler.com/study/vim/
-    - link: XKCD
-      url: https://xkcd.com
 
