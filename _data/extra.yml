@@ -6,3 +6,7 @@
 - date: 2022-02-24
   due:
     - page: /assignments/shell-scripts.html
+
+- date: 2022-05-05
+  due:
+    - page: /assignments/command-line.html
