@@ -74,12 +74,16 @@
       url: https://rebelsky.cs.grinnell.edu/musings/cnix-make-implicit-rules
   notes: ../eboards/eboard08
 
+- topic: Make, Macros, and more
+
 - topic: Macros and the C preprocessor
   reading: 
     - link: The GNU CPP Manual
       url: https://gcc.gnu.org/onlinedocs/cpp/
+  notes: ../eboards/eboard10
 
-- topic: More fun with macros
+- topic: Exploring code
+  abbrev: exploring
   reading:
     - link: The C Preprocessor
       url: https://rebelsky.cs.grinnell.edu/musings/cnix-c-preprocessor
@@ -92,17 +96,19 @@
     - link: uthash user guide
       url: http://troydhanson.github.io/uthash/userguide.html
 
-- topic: Exploring code
-  abbrev: exploring
-
-- topic: Exploring code, continued
-
-- topic: Fun with queues (and memory management and debugging)
+- topic: Fun with memory
+  abbrev: memory
+  reading:
+    - link: C isn't a language
+      url: https://gankra.github.io/blah/c-isnt-a-language/
+  notes: ../eboards/eboard12
 
 - topic: Command-line processing
   reading: 
-    - link: Man page for `getopt`
-    - link: Man page for `getopt_long`
+    - Man page for `getopt`
+    - Man page for `getopt_long`
+    - link: C isn't a language
+      url: https://gankra.github.io/blah/c-isnt-a-language/
 
 - topic: Wrapup
   reading:
